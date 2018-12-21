@@ -10,6 +10,10 @@
   float: left !important;
 }
 
+.card-ufg {
+  padding: 0px !important;
+}
+
 .position-rel {
   position: relative;
 }
