@@ -32,11 +32,11 @@ export const MENU_PRINCIPAL: ItemMenu[] = [
         subMenu: [
             {
                 titulo: 'Listar Todos',
-                routePath: 'sistemas/list'
+                routePath: 'sistema/list'
             },
             {
                 titulo: 'Cadastro',
-                routePath: 'sistemas/new'
+                routePath: 'sistema/new'
             }
         ]
     }

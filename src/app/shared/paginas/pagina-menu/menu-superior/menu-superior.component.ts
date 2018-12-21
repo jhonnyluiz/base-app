@@ -13,6 +13,7 @@ export class MenuSuperiorComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    console.log(this.menu)
   }
 
 }

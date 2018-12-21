@@ -6,14 +6,16 @@
         {{ itemMenu.titulo }}
       </button>
       <mat-menu #dropDown="matMenu" overlapTrigger="false">
-        <button [routerLink]="['/submenu.routePath']" routerLinkActive="router-link-active"  mat-menu-item *ngFor="let subMenu of itemMenu.subMenu">
-          <mat-icon *ngIf="subMenu.icon">{{ subMenu.icon }}</mat-icon>
-          <span>{{ subMenu.titulo }}</span>
-        </button>
+        <div *ngFor="let subMenu of itemMenu.subMenu">
+          <a [routerLink]="[subMenu.routePath]" mat-menu-item>
+            <mat-icon *ngIf="subMenu.icon">{{ subMenu.icon }}</mat-icon>
+            <span>{{ subMenu.titulo }}</span>
+          </a>
+        </div>
       </mat-menu>
     </div>
     <ng-template #menuSimples>
-      <button mat-button class="float-left">
+      <button [routerLink]="[itemMenu.routePath]" mat-button class="float-left">
         <mat-icon class="mr-1">{{itemMenu.icon}}</mat-icon>
         {{ itemMenu.titulo }}
       </button>

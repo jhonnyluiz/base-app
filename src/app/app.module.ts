@@ -5,12 +5,14 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { PaginaErro404Component } from './shared/paginas/pagina-erro404/pagina-erro404.component';
-import { AppRoutingModule } from './app-routing.module'
+import { AppRoutingModule } from './app-routing.module';
+import { DashboardComponent } from './shared/paginas/dashboard/dashboard.component'
 
 @NgModule({
   declarations: [
     AppComponent,
-    PaginaErro404Component
+    PaginaErro404Component,
+    DashboardComponent
   ],
   imports: [
     AppRoutingModule,
