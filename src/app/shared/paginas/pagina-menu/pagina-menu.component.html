@@ -1,0 +1,20 @@
+<mat-sidenav-container class="container">
+  <mat-sidenav #sidenav [(mode)]="config.over" [(opened)]="config.opened" class="bottom-to-top">
+    <mat-toolbar-row class="background-ufg toolbar-row-header">
+      <img class="circle float-left " src="./assets/images/cad.png" width="50">
+      <span class="lead"><b>SAS</b></span>
+    </mat-toolbar-row>
+    <div class="mt-3">
+      <app-menu [itensMenu]="menuPrincipal" [config]="config"></app-menu>
+    </div>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar class="header-box-shadow background-ufg">
+      <button mat-icon-button (click)="sidenav.toggle()" fxShow.sm="true" fxShow.gt-sm="false">
+        <mat-icon>menu</mat-icon>
+      </button>
+      <app-header [menuHeader]="menuHeader" class="width100"></app-header>
+    </mat-toolbar>
+  </mat-sidenav-content>
+  <router-outlet></router-outlet>
+</mat-sidenav-container>

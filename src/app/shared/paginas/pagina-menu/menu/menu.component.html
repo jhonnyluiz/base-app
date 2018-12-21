@@ -1,0 +1,8 @@
+<div *ngFor="let item of itensMenu">
+  <div *ngIf="item.subMenu != null; else menuSimples">
+    <app-item-submenu [config]="config" [menu]="item"></app-item-submenu>
+  </div>
+  <ng-template #menuSimples>
+    <app-item-menu [config]="config" [menu]="item"></app-item-menu>
+  </ng-template>
+</div>

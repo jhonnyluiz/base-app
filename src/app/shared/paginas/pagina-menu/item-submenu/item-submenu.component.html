@@ -1,0 +1,17 @@
+<mat-accordion multi="true" [displayMode]="config.displayMode">
+  <mat-expansion-panel class="no-shadow my-0">
+    <mat-expansion-panel-header fxLayout="row" [expandedHeight]="config.expandHeight" [collapsedHeight]="config.collapseHeight">
+      <mat-panel-title fxLayoutAlign="start center">
+        <mat-icon class="icon-button-menu">{{ menu.icon }}</mat-icon>
+        <span>{{ menu.titulo }}</span>
+      </mat-panel-title>
+    </mat-expansion-panel-header>
+    <mat-nav-list class="m1-0" dense>
+      <mat-list-item *ngFor="let subMenu of menu.subMenu">
+        <a [routerLink]="['/subMenu.routePath']" routerLinkActive="router-link-active"  fxLayoutAlign="start center">
+          <span>{{ subMenu.titulo }}</span>
+        </a>
+      </mat-list-item>
+    </mat-nav-list>
+  </mat-expansion-panel>
+</mat-accordion>

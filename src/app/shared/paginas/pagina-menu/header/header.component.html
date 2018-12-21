@@ -1,0 +1,20 @@
+<app-menu-superior *ngIf="menuHeader.toolbar" [menu]="menuHeader.toolbar" class="width100"></app-menu-superior>
+<span class="spacer"></span>
+<div fxLayoutAlign="end center">
+    <button mat-button [matMenuTriggerFor]="menu" fxShow.lt-md="false" fxShow.gt-sm="true">
+        <mat-icon>{{ menuHeader.perfil.icon }}</mat-icon>
+        <span class="ml-2">{{ menuHeader.perfil.titulo}}</span>
+    </button>
+    <button mat-icon-button [matMenuTriggerFor]="menu" fxShow.lt-md="true" fxShow.gt-sm="false">
+        <mat-icon>{{ menuHeader.perfil.icon }}</mat-icon>
+    </button>
+    <mat-menu #menu="matMenu" overlapTrigger="false">
+        <button mat-menu-item *ngFor="let subMenu of menuHeader.perfil.subMenu" [routerLink]="['/subMenu.routePath']" routerLinkActive="router-link-active" >
+            <mat-icon>{{ subMenu.icon }}</mat-icon>
+            <span>{{ subMenu.titulo }}</span>
+        </button>
+    </mat-menu>
+    <button mat-icon-button routerLink="/logout" routerLinkActive="router-link-active" >
+        <mat-icon title="Sair">exit_to_app</mat-icon>
+    </button>
+</div>
