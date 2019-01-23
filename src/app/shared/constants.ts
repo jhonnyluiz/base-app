@@ -23,24 +23,30 @@ export const MENU_PRINCIPAL: ItemMenu[] = [
     {
         titulo: 'Dashboard',
         icon: 'dashboard',
-        routePath: 'dashboard'
+        routePath: '/dashboard'
     },
     {
         titulo: 'Sistemas',
         icon: 'dvr',
-        role: 'ROLE_SISTEMAS_SAS',
-        subMenu: [
-            {
-                titulo: 'Listar Todos',
-                routePath: 'sistema/list'
-            },
-            {
-                titulo: 'Cadastro',
-                routePath: 'sistema/new'
-            }
-        ],
-        opened: true
-    }
+        routePath: '/sistema',
+        role: 'ROLE_SISTEMAS_SAS'
+    },
+    // {
+    //     titulo: 'Sistemas',
+    //     icon: 'dvr',
+    //     role: 'ROLE_SISTEMAS_SAS',
+    //     subMenu: [
+    //         {
+    //             titulo: 'Listar Todos',
+    //             routePath: '/sistema/list'
+    //         },
+    //         {
+    //             titulo: 'Cadastro',
+    //             routePath: '/sistema/new'
+    //         }
+    //     ],
+    //     opened: true
+    // }
 ];
 
 export const MENU_HEADER: MenuHeader = {

@@ -1,17 +1,24 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { SistemaComponent } from './sistema.component';
+import { SistemaTableComponent } from './sistema-table/sistema-table.component';
 
 const routes: Routes = [
     {
-        path: 'list',
-        component: SistemaComponent
-    },
-    {
         path: '',
-        redirectTo: 'list',
-        pathMatch: 'full',
-    }
+        component: SistemaComponent,
+        children: [
+            {
+                path: 'list',
+                component: SistemaTableComponent
+            },
+            {
+                path: '',
+                redirectTo: 'list',
+                pathMatch: 'full'
+            }
+        ]
+    },
 ];
 
 @NgModule({

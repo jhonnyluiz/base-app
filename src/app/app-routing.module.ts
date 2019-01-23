@@ -8,13 +8,8 @@ const routes: Routes = [
         component: PaginaErro404Component
     },
     {
-        path: 'admin',
-        loadChildren: './shared/paginas/pagina-menu/pagina-menu.module#PaginaMenuModule',
-    },
-    {
         path: '',
-        redirectTo: 'admin',
-        pathMatch: 'full'
+        loadChildren: './shared/paginas/pagina-menu/pagina-menu.module#PaginaMenuModule'
     },
     {
         path: '**',

@@ -11,7 +11,7 @@ export class CrudHttpService<T> {
 
   path: string;
 
-  constructor(private http: HttpClient) { }
+  constructor(public http: HttpClient) { }
 
   getTodos(): Observable<T> {
     return this.http.get<T>(this.getPath());

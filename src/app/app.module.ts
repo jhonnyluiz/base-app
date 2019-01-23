@@ -23,8 +23,7 @@ import { HttpClientModule } from '@angular/common/http';
     BrowserAnimationsModule,
     FormsModule,
     HttpClientModule,
-    MaterialModule,
-    PaginaMenuModule
+    MaterialModule
   ],
   providers: [
     { provide: MatPaginatorIntl, useClass: PaginadorBr}

@@ -9,12 +9,12 @@ const routes: Routes = [
         component: PaginaMenuComponent,
         children: [
             {
-                path: 'sistema',
-                loadChildren: '../../../modules/sistema/sistema.module#SistemaModule'
-            },
-            {
                 path: 'dashboard',
                 component: DashboardComponent
+            },
+            {
+                path: 'sistema',
+                loadChildren: '../../../modules/sistema/sistema.module#SistemaModule'
             },
             {
                 path: '',
