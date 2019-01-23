@@ -1,4 +1,4 @@
-import { ItemMenu } from "./models/item-menu";
+import { ItemMenu } from './models/item-menu';
 import { ConfigMenu } from './models/config-menu';
 import { MenuHeader } from './models/menu-header';
 
@@ -17,7 +17,7 @@ const MENU_PERFIL = {
             routePath: 'perfil/config'
         }
     ]
-}
+};
 
 export const MENU_PRINCIPAL: ItemMenu[] = [
     {
@@ -38,14 +38,15 @@ export const MENU_PRINCIPAL: ItemMenu[] = [
                 titulo: 'Cadastro',
                 routePath: 'sistema/new'
             }
-        ]
+        ],
+        opened: true
     }
-]
+];
 
 export const MENU_HEADER: MenuHeader = {
     toolbar: MENU_PRINCIPAL,
     perfil: MENU_PERFIL
-}
+};
 
 export const CONFIG_MENU: ConfigMenu = {
     opened: true,
@@ -53,4 +54,4 @@ export const CONFIG_MENU: ConfigMenu = {
     expandHeight: '42px',
     collapseHeight: '42px',
     displayMode: 'flat',
-}
+};

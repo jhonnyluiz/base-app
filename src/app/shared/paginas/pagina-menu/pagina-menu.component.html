@@ -1,5 +1,5 @@
 <mat-sidenav-container class="container">
-  <mat-sidenav #sidenav [(mode)]="config.over" [(opened)]="config.opened" class="bottom-to-top">
+  <mat-sidenav #sidenav [(mode)]="config.over" [(opened)]="config.opened" class="bottom-to-top sidenav-color">
     <mat-toolbar-row class="background-ufg toolbar-row-header">
       <img class="circle float-left " src="./assets/images/cad.png" width="50">
       <span class="lead"><b>SAS</b></span>
@@ -9,7 +9,7 @@
     </div>
   </mat-sidenav>
   <mat-sidenav-content>
-    <mat-toolbar class="header-box-shadow background-ufg">
+    <mat-toolbar class="header-box-shadow menu-header">
       <button mat-icon-button (click)="sidenav.toggle()" fxShow.sm="true" fxShow.gt-sm="false">
         <mat-icon>menu</mat-icon>
       </button>

@@ -14,11 +14,11 @@ import { MenuHeader } from '../../models/menu-header';
 })
 export class PaginaMenuComponent implements OnInit {
 
-  menuHeader: MenuHeader = MENU_HEADER
-  menuPrincipal: ItemMenu[] = MENU_PRINCIPAL
-  config: ConfigMenu = CONFIG_MENU
+  menuHeader: MenuHeader = MENU_HEADER;
+  menuPrincipal: ItemMenu[] = MENU_PRINCIPAL;
+  config: ConfigMenu = CONFIG_MENU;
   watcher: Subscription;
-  
+
   constructor(media: ObservableMedia) {
     this.watcher = media.subscribe((change: MediaChange) => {
       if (change.mqAlias === 'sm' || change.mqAlias === 'xs') {

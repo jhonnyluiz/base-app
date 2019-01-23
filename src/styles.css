@@ -6,6 +6,38 @@
   color: white !important;
 }
 
+.menu-header {
+  background-color: #fff !important;
+  color: #3f3f3f !important;
+}
+
+.mat-card {
+  padding: 6px !important;
+}
+
+.sidenav-color {
+  background-color: #7f7f7f !important;
+  color: #fff !important;
+}
+
+.table-content {
+  width: 100%;
+}
+
+.mat-row:hover {
+  background-color: #EEEEEE;
+}
+
+.active {
+  background-color: #bfbfbf !important;
+  color: #1f1f1f !important;
+}
+
+.active .mat-icon {
+  color: #0072b9 !important;
+}
+
+
 .float-left {
   float: left !important;
 }

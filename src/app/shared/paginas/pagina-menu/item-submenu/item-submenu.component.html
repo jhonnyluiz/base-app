@@ -1,17 +1,13 @@
-<mat-accordion multi="true" [displayMode]="config.displayMode">
-  <mat-expansion-panel class="no-shadow my-0">
-    <mat-expansion-panel-header fxLayout="row" [expandedHeight]="config.expandHeight" [collapsedHeight]="config.collapseHeight">
-      <mat-panel-title fxLayoutAlign="start center">
+<mat-nav-list class="m1-0" dense>
+    <a mat-list-item class="m-0" style="font-size:15px; color: #fff" (click)="menu.opened = !menu.opened">
         <mat-icon class="icon-button-menu">{{ menu.icon }}</mat-icon>
         <span>{{ menu.titulo }}</span>
-      </mat-panel-title>
-    </mat-expansion-panel-header>
-    <mat-nav-list class="m1-0" dense>
-      <mat-list-item *ngFor="let subMenu of menu.subMenu">
-        <a fxLayoutAlign="start center" [routerLink]="[subMenu.routePath]" class="width100 height100">
-          <span>{{ subMenu.titulo }}</span>
-        </a>
-      </mat-list-item>
-    </mat-nav-list>
-  </mat-expansion-panel>
-</mat-accordion>
+    </a>
+    <div *ngIf="menu.opened">
+    <mat-list-item *ngFor="let subMenu of menu.subMenu" style="color: #fff" [routerLink]="[subMenu.routePath]" routerLinkActive="active">
+        <mat-icon class="icon-button-menu p-2">{{ subMenu.icon }}</mat-icon>
+        <span>{{ subMenu.titulo }}</span>
+    </mat-list-item>
+    </div>
+  </mat-nav-list>
+  <mat-divider></mat-divider>

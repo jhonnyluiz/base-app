@@ -4,26 +4,26 @@ import { PaginaMenuComponent } from './pagina-menu.component';
 import { DashboardComponent } from '../dashboard/dashboard.component';
 
 const routes: Routes = [
-    { 
-        path: '', 
+    {
+        path: '',
         component: PaginaMenuComponent,
         children: [
-            {   
+            {
                 path: 'sistema',
-                loadChildren: '../../../modules/sistema/sistema.module#SistemaModule' 
+                loadChildren: '../../../modules/sistema/sistema.module#SistemaModule'
             },
-            {   
+            {
                 path: 'dashboard',
-                component: DashboardComponent 
+                component: DashboardComponent
             },
             {
                 path: '',
-                redirectTo: 'dashboard'
+                redirectTo: 'dashboard',
+                pathMatch: 'full'
             }
         ]
     },
-    
-]
+];
 
 @NgModule({
     imports: [RouterModule.forChild(routes)],

@@ -4,14 +4,15 @@ import { SistemaComponent } from './sistema.component';
 
 const routes: Routes = [
     {
-        path: 'list', 
+        path: 'list',
         component: SistemaComponent
-    }, 
+    },
     {
         path: '',
-        redirectTo: 'list'
+        redirectTo: 'list',
+        pathMatch: 'full',
     }
-]
+];
 
 @NgModule({
     imports: [RouterModule.forChild(routes)],

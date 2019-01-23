@@ -1,3 +1,4 @@
+import { DashboardComponent } from './../dashboard/dashboard.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { PaginaMenuComponent } from './pagina-menu.component';
@@ -8,20 +9,25 @@ import { ItemSubmenuComponent } from './item-submenu/item-submenu.component';
 import { MenuComponent } from './menu/menu.component';
 import { HeaderComponent } from './header/header.component';
 import { MenuSuperiorComponent } from './menu-superior/menu-superior.component';
+import { SistemaModule } from 'src/app/modules/sistema/sistema.module';
 
 @NgModule({
   imports: [
     CommonModule,
     MaterialModule,
+    SistemaModule,
     PaginaMenuRoutingModule
   ],
   declarations: [
-    PaginaMenuComponent,
+    DashboardComponent,
+    HeaderComponent,
     ItemMenuComponent,
     ItemSubmenuComponent,
     MenuComponent,
-    HeaderComponent,
-    MenuSuperiorComponent
+    MenuSuperiorComponent,
+    PaginaMenuComponent
+  ],
+  exports: [
   ]
 })
 export class PaginaMenuModule { }

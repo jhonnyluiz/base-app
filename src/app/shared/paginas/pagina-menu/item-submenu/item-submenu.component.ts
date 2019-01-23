@@ -9,8 +9,8 @@ import { ItemMenu } from 'src/app/shared/models/item-menu';
 })
 export class ItemSubmenuComponent implements OnInit {
 
-  @Input() config: ConfigMenu
-  @Input() menu: ItemMenu
+  @Input() config: ConfigMenu;
+  @Input() menu: ItemMenu;
 
   constructor() { }
 
