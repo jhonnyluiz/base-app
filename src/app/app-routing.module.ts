@@ -1,3 +1,4 @@
+import { PaginaMenuComponent } from './shared/paginas/pagina-menu/pagina-menu.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { PaginaErro404Component } from './shared/paginas/pagina-erro404/pagina-erro404.component';
@@ -13,8 +14,7 @@ const routes: Routes = [
     },
     {
         path: '**',
-        redirectTo: 'erro404',
-        pathMatch: 'full'
+        redirectTo: 'erro404'
     },
 ];
 

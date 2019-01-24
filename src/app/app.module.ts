@@ -1,4 +1,3 @@
-import { PaginaMenuModule } from './shared/paginas/pagina-menu/pagina-menu.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
@@ -11,6 +10,7 @@ import { MatPaginatorIntl } from '@angular/material';
 import { PaginaErro404Component } from './shared/paginas/pagina-erro404/pagina-erro404.component';
 import { PaginadorBr } from './shared/paginadorBr';
 import { HttpClientModule } from '@angular/common/http';
+import { EmissorEventService } from './shared/services/event/emissor-event.service';
 
 @NgModule({
   declarations: [
@@ -26,6 +26,7 @@ import { HttpClientModule } from '@angular/common/http';
     MaterialModule
   ],
   providers: [
+    EmissorEventService,
     { provide: MatPaginatorIntl, useClass: PaginadorBr}
   ],
   bootstrap: [AppComponent]

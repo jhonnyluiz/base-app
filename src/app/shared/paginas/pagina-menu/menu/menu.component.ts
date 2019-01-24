@@ -11,8 +11,8 @@ import { ObservableMedia, MediaChange } from '@angular/flex-layout';
 })
 export class MenuComponent implements OnInit {
 
-  @Input() itensMenu: ItemMenu[]
-  @Input() config: ConfigMenu
+  @Input() itensMenu: ItemMenu[];
+  @Input() config: ConfigMenu;
 
   constructor() {
   }

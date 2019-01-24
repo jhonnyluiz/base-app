@@ -2,6 +2,11 @@ import { ItemMenu } from './models/item-menu';
 import { ConfigMenu } from './models/config-menu';
 import { MenuHeader } from './models/menu-header';
 
+export const ACOES_EVENT = {
+    sistema : { novo: 'novoSistema'},
+};
+
+
 const MENU_PERFIL = {
     titulo: 'Jhonny',
     icon: 'account_circle',
@@ -28,7 +33,7 @@ export const MENU_PRINCIPAL: ItemMenu[] = [
     {
         titulo: 'Sistemas',
         icon: 'dvr',
-        routePath: '/sistema',
+        routePath: '/sistema/list',
         role: 'ROLE_SISTEMAS_SAS'
     },
     // {

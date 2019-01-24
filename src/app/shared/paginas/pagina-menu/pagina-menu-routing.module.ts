@@ -1,3 +1,4 @@
+import { SistemaComponent } from './../../../modules/sistema/sistema.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { PaginaMenuComponent } from './pagina-menu.component';
@@ -14,6 +15,7 @@ const routes: Routes = [
             },
             {
                 path: 'sistema',
+                component: SistemaComponent,
                 loadChildren: '../../../modules/sistema/sistema.module#SistemaModule'
             },
             {
@@ -21,7 +23,7 @@ const routes: Routes = [
                 redirectTo: 'dashboard',
                 pathMatch: 'full'
             }
-        ]
+        ],
     },
 ];
 

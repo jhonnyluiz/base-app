@@ -7,7 +7,8 @@ import { HttpClient } from '@angular/common/http';
 export class SistemaService extends CrudHttpService<Sistema> {
 
     path = '/sistemas';
+    teste;
     constructor(public http: HttpClient) {
         super(http);
-     }
+    }
 }

@@ -21,6 +21,18 @@ export class CrudHttpService<T> {
     return this.http.get<Pagina<T>>(this.getPathPaginado(pagina, search, sort));
   }
 
+  criar(obj: T): Observable<any> {
+    return this.http.post<T>(this.getPath(), obj);
+  }
+
+  atualizar(id: string, obj: T) {
+    return this.http.put<T>(this.getPath('/' + id), obj);
+  }
+
+  excluir(id: string): Observable<any> {
+    return this.http.delete(this.getPath('/' + id));
+  }
+
   private getPath(addPath = '') {
     return environment.api_url + this.path + addPath;
   }
