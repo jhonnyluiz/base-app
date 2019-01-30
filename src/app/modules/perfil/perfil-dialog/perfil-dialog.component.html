@@ -1,0 +1,27 @@
+<h1 mat-dialog-title>{{data.acao}} Perfil</h1>
+<div mat-dialog-content>
+  <form #formSistema="ngForm" >
+    <mat-form-field class="w-100">
+      <input matInput placeholder="Código do Perfil" name="codigoPerfil" [(ngModel)]="data.obj.codigoPerfil" required>
+    </mat-form-field>
+    <mat-form-field class="w-100">
+      <input matInput placeholder="Descrição do Perfil" name="descricaoPerfil" [(ngModel)]="data.obj.descricaoPerfil" required>
+    </mat-form-field>
+    <mat-form-field class="w-100">
+      <input matInput placeholder="Nome Role" name="nomeRole" [(ngModel)]="data.obj.nomeRole">
+    </mat-form-field>
+    <mat-form-field class="w-100">
+      <input matInput placeholder="Nome Formulário Inicial" name="nomeFormulario" [(ngModel)]="data.obj.nomeFormInicial">
+    </mat-form-field>
+  </form>
+  <mat-progress-bar *ngIf="carregando" mode="indeterminate"></mat-progress-bar>
+</div>
+<div mat-dialog-actions>
+  <div style="width: 70%;">
+    <button mat-stroked-button (click)="salvar(data.obj)" color="primary" [disabled]="formSistema.invalid">Salvar</button>
+    <button mat-stroked-button (click)="cancelar()" class="ml-1">Cancelar</button>
+  </div>
+  <div *ngIf="data.acao != 'Novo'" style="width: 30%; text-align: end;">
+    <button mat-stroked-button (click)="excluir(data.obj)" color="warn" >Excluir</button>
+  </div>
+</div>

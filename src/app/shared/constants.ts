@@ -4,6 +4,7 @@ import { MenuHeader } from './models/menu-header';
 
 export const ACOES_EVENT = {
     sistema : { novo: 'novoSistema'},
+    perfil: { novo: 'novoPerfil'},
 };
 
 
@@ -30,28 +31,28 @@ export const MENU_PRINCIPAL: ItemMenu[] = [
         icon: 'dashboard',
         routePath: '/dashboard'
     },
-    {
-        titulo: 'Sistemas',
-        icon: 'dvr',
-        routePath: '/sistema/list',
-        role: 'ROLE_SISTEMAS_SAS'
-    },
     // {
     //     titulo: 'Sistemas',
     //     icon: 'dvr',
-    //     role: 'ROLE_SISTEMAS_SAS',
-    //     subMenu: [
-    //         {
-    //             titulo: 'Listar Todos',
-    //             routePath: '/sistema/list'
-    //         },
-    //         {
-    //             titulo: 'Cadastro',
-    //             routePath: '/sistema/new'
-    //         }
-    //     ],
-    //     opened: true
-    // }
+    //     routePath: '/sistema/list',
+    //     role: 'ROLE_SISTEMAS_SAS'
+    // },
+    {
+        titulo: 'Sistemas',
+        icon: 'dvr',
+        role: 'ROLE_SISTEMAS_SAS',
+        subMenu: [
+            {
+                titulo: 'Listar Todos',
+                routePath: '/sistema/list'
+            },
+            {
+                titulo: 'Cadastro',
+                routePath: '/sistema/new'
+            }
+        ],
+        opened: true
+    }
 ];
 
 export const MENU_HEADER: MenuHeader = {

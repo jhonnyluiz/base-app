@@ -11,6 +11,7 @@ import { PaginaErro404Component } from './shared/paginas/pagina-erro404/pagina-e
 import { PaginadorBr } from './shared/paginadorBr';
 import { HttpClientModule } from '@angular/common/http';
 import { EmissorEventService } from './shared/services/event/emissor-event.service';
+import { AlertSnackbarComponent } from './shared/paginas/alert-snackbar/alert-snackbar.component';
 
 @NgModule({
   declarations: [

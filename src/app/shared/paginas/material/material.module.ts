@@ -14,8 +14,10 @@ import {
   MatProgressBarModule,
   MatSelectModule,
   MatSidenavModule,
+  MatSnackBarModule,
   MatSortModule,
   MatTableModule,
+  MatTabsModule,
   MatToolbarModule } from '@angular/material';
 import { FlexLayoutModule } from '@angular/flex-layout';
 
@@ -36,8 +38,10 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     MatProgressBarModule,
     MatSelectModule,
     MatSidenavModule,
+    MatSnackBarModule,
     MatSortModule,
     MatTableModule,
+    MatTabsModule,
     MatToolbarModule,
   ],
   exports: [
@@ -56,8 +60,10 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     MatProgressBarModule,
     MatSelectModule,
     MatSidenavModule,
+    MatSnackBarModule,
     MatSortModule,
     MatTableModule,
+    MatTabsModule,
     MatToolbarModule,
   ],
 })

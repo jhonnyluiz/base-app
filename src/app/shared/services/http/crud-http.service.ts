@@ -17,6 +17,10 @@ export class CrudHttpService<T> {
     return this.http.get<T>(this.getPath());
   }
 
+  getById(id): Observable<T> {
+    return this.http.get<T>(this.getPath('/' + id));
+  }
+
   consultaPaginada(pagina: Pagina<T>, search?, sort?): Observable<Pagina<T>> {
     return this.http.get<Pagina<T>>(this.getPathPaginado(pagina, search, sort));
   }

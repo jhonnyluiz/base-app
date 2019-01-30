@@ -2,7 +2,6 @@ import { Component, Inject } from '@angular/core';
 import { Sistema } from '../../../shared/models/sistema';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
 import { SistemaService } from '../sistema.service';
-import { Observable } from 'rxjs';
 
 const POSICAO_MENU = [
   { key: 'H', value: 'Horizontal' },

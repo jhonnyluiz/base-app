@@ -14,21 +14,14 @@ import { ACOES_EVENT } from 'src/app/shared/constants';
 })
 export class SistemaComponent implements OnInit {
 
-  sistema: Sistema;
-  acao = ACOES_EVENT;
+  // acao = ACOES_EVENT;
+  // constructor(private emissorEvent: EmissorEventService) {}
+  // novoSistema(): void {
+  //   this.emissorEvent.emitChange({ acao: this.acao.sistema.novo });
+  // }
 
-  constructor(public dialog: MatDialog, private emissorEvent: EmissorEventService) {}
+  constructor() { }
 
   ngOnInit() {
   }
-
-  /**
-   * Método responsável por abrir um dialog para criação de dados.
-   *
-   * @param event
-   */
-  novoSistema(): void {
-    this.emissorEvent.emitChange({ acao: this.acao.sistema.novo });
-  }
-
 }

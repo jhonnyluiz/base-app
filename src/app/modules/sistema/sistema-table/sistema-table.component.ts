@@ -20,13 +20,16 @@ export class SistemaTableComponent implements OnInit {
   @ViewChild(MatPaginator) pagination: MatPaginator;
   pagina: Pagina<Sistema> = new Pagina<Sistema>();
   dataSource: SistemaDataSource | null;
-  pageSizeOptions: number[] = [10, 15, 20, 50];
   displayedColumns = ['codigoSistema', 'nomeSistema'];
   search;
   sort;
 
 
-  constructor(private sistemaService: SistemaService, public dialog: MatDialog, private emissorEvent: EmissorEventService) { }
+  constructor(
+    private dialog: MatDialog,
+    private sistemaService: SistemaService,
+    private emissorEvent: EmissorEventService
+  ) { }
 
   ngOnInit() {
     this.carregarDados();
@@ -35,8 +38,7 @@ export class SistemaTableComponent implements OnInit {
 
   chamarMetodo(event: Evento) {
     if (event.acao === this.acao.sistema.novo) {
-      const sistema =  new Sistema('', '');
-      this.abrirDialog(sistema, 'Novo');
+      this.abrirDialog(new Sistema('', ''), 'Novo');
     }
   }
 

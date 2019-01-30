@@ -7,19 +7,22 @@ import { SistemaRoutingModule } from './sistema-routing.module';
 import { SistemaTableComponent } from './sistema-table/sistema-table.component';
 import { SistemaService } from './sistema.service';
 import { SistemaDialogComponent } from './sistema-dialog/sistema-dialog.component';
-import { EmissorEventService } from 'src/app/shared/services/event/emissor-event.service';
+import { SistemaFormComponent } from './sistema-form/sistema-form.component';
+import { PerfilModule } from '../perfil/perfil.module';
 
 @NgModule({
   declarations: [
     SistemaComponent,
     SistemaTableComponent,
-    SistemaDialogComponent
+    SistemaDialogComponent,
+    SistemaFormComponent
   ],
   imports: [
     CommonModule,
-    SistemaRoutingModule,
+    FormsModule,
     MaterialModule,
-    FormsModule
+    PerfilModule,
+    SistemaRoutingModule,
   ],
   exports: [
     SistemaComponent,
