@@ -1,13 +1,21 @@
 <mat-nav-list class="m1-0" dense>
     <a mat-list-item class="m-0" style="font-size:15px; color: #fff" (click)="menu.opened = !menu.opened">
-        <mat-icon class="icon-button-menu">{{ menu.icon }}</mat-icon>
-        <span>{{ menu.titulo }}</span>
+        <div fxLayoutAlign="start center" fxFlex="90%">
+            <mat-icon class="icon-button-menu">{{ menu.icon }}</mat-icon>
+            <span>{{ menu.titulo }}</span>
+        </div>
+        <span class="spacer"></span>
+        <div fxLayoutAlign="end center">
+            <mat-icon *ngIf="!menu.opened">expand_more</mat-icon>
+            <mat-icon *ngIf="menu.opened">expand_less</mat-icon>
+        </div>
     </a>
     <div *ngIf="menu.opened">
-    <mat-list-item *ngFor="let subMenu of menu.subMenu" style="color: #fff" [routerLink]="[subMenu.routePath]" routerLinkActive="active">
-        <mat-icon class="icon-button-menu p-2">{{ subMenu.icon }}</mat-icon>
-        <span>{{ subMenu.titulo }}</span>
-    </mat-list-item>
+        <mat-list-item *ngFor="let subMenu of menu.subMenu" style="color: #fff; background-color: #5f5f5f;" [routerLink]="[subMenu.routePath]"
+            routerLinkActive="active">
+            <mat-icon class="icon-button-menu p-2">{{ subMenu.icon }}</mat-icon>
+            <span>{{ subMenu.titulo }}</span>
+        </mat-list-item>
     </div>
-  </mat-nav-list>
-  <mat-divider></mat-divider>
+</mat-nav-list>
+<mat-divider></mat-divider>
